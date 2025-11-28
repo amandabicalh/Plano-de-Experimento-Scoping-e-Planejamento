@@ -1,4 +1,4 @@
-# Plano de Experimento — Seções 1 a 6 
+# Plano de Experimento — Seções 1 a 9
 
 ## 1. Identificação básica
 
@@ -262,6 +262,128 @@ in the context of **projetos de software acadêmicos e profissionais com equipes
 - Falha crítica no ambiente de desenvolvimento.  
 - Cancelamento do projeto ou mudança completa de escopo.  
 - Identificação de viés severo que invalide o experimento.
+
+# 7. Modelo Conceitual e Hipóteses
+
+## 7.1 Modelo Conceitual do Experimento
+O modelo conceitual parte da ideia de que revisões de código estruturadas, guiadas por um checklist, aumentam a precisão e consistência do processo de revisão. A utilização de listas de verificação reduz omissões cognitivas, padroniza critérios de inspeção e aumenta a probabilidade de identificar problemas que revisores poderiam ignorar espontaneamente.
+
+Sem checklist, o processo é altamente dependente da experiência e memória do revisor; com checklist, há um apoio cognitivo explícito, reduzindo variabilidade entre revisores.
+
+**Relações esperadas no modelo:**
+- **Checklist → Aumento da detecção de defeitos**
+- **Checklist → Aumento moderado do tempo de revisão**
+- **Checklist → Melhor consistência entre revisores**
+- **Experiência do revisor (variável de bloqueio)** impacta eficiência e velocidade, mas será controlada.
+
+```
+Uso de Checklist ───► Aumento de defeitos detectados
+        │
+        └───────────► Aumento previsível do tempo de revisão
+```
+
+## 7.2 Hipóteses Formais (H0 e H1)
+
+### Hipótese 1 — Detecção de Defeitos
+- **H0₁:** O uso do checklist não aumenta significativamente o número de defeitos detectados.
+- **H1₁:** O uso do checklist aumenta significativamente o número de defeitos detectados.
+
+### Hipótese 2 — Tempo de Revisão
+- **H0₂:** O uso do checklist não altera significativamente o tempo médio de revisão.
+- **H1₂:** O uso do checklist aumenta significativamente o tempo médio de revisão.
+
+### Hipótese 3 — Consistência entre Revisores
+- **H0₃:** Não há diferença significativa na variabilidade da detecção de defeitos entre revisores com e sem checklist.
+- **H1₃:** Revisores usando checklist apresentam menor variabilidade entre si.
+
+## 7.3 Nível de Significância e Poder
+- **Nível de significância:** α = 0,05  
+- **Poder estatístico desejado:** ≥ 0,8
+
+Estratégias de mitigação em caso de amostra pequena:
+- aumentar o número de tarefas por participante;
+- usar desenho com blocos.
+
+# 8. Variáveis, Fatores, Tratamentos e Objetos de Estudo
+
+## 8.1 Objetos de Estudo
+- Pull Requests simulados com defeitos injetados
+- Trechos de código de ~100–150 linhas
+- Defeitos distribuídos entre lógica, estilo, documentação, segurança e performance
+
+## 8.2 Sujeitos / Participantes
+Participantes:
+- Estudantes de Engenharia de Software / Ciência da Computação  
+ou  
+- Desenvolvedores juniores
+
+Perfil esperado:
+- Conhecimento intermediário de programação
+- Pouca experiência com code review formal
+
+## 8.3 Variáveis Independentes (Fatores)
+| Fator | Níveis | Tipo |
+|------|--------|------|
+| Uso de checklist | Sem checklist / Com checklist | Categórico |
+| Experiência | Alta / Baixa | Categórico |
+| Tipo de PR | T1 / T2 | Contínuo ou categórico |
+
+## 8.4 Tratamentos
+### Tratamento 1 — Sem Checklist
+Revisão livre, sem apoio estruturado.
+
+### Tratamento 2 — Com Checklist
+Checklist inclui:
+- nomes consistentes  
+- tratamento de erros  
+- aderência ao estilo  
+- funções longas  
+- testes cobrindo novos comportamentos  
+- comentários desnecessários/ausentes  
+
+## 8.5 Variáveis Dependentes
+| Variável | Definição | Unidade |
+|----------|-----------|---------|
+| Defeitos corretamente detectados | número real encontrado | contagem |
+| Tempo total | tempo gasto | minutos |
+| Precisão | defeitos corretos / total relatado | proporção |
+| Consistência | desvio-padrão entre participantes | estatístico |
+
+## 8.6 Variáveis de Controle
+- Experiência  
+- Complexidade do PR  
+- Ambiente  
+- Tempo limite  
+- Linguagem do código  
+
+## 8.7 Variáveis de Confusão
+- Motivação/fadiga  
+- Familiaridade prévia  
+- Estratégias pessoais  
+- Ritmo natural  
+- Horário  
+
+# 9. Desenho Experimental
+
+## 9.1 Tipo de Desenho
+**Desenho em blocos aleatorizados** com blocos por experiência.
+
+## 9.2 Randomização
+- Classificar participantes por experiência  
+- Sortear para:
+  - **Grupo A:** checklist → sem checklist  
+  - **Grupo B:** sem checklist → checklist  
+- PRs também são randomizados
+
+## 9.3 Balanceamento e Contrabalanço
+- Mesmo número de participantes por grupo  
+- Metade inicia com checklist, metade sem  
+- PRs trocados entre grupos
+
+## 9.4 Número de Grupos e Sessões
+- **Grupos:** A e B  
+- **Sessões:** 2 por participante  
+- **Duração:** 20–25 min cada
 
 
 ```md
