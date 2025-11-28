@@ -304,57 +304,95 @@ Estratégias de mitigação em caso de amostra pequena:
 - aumentar o número de tarefas por participante;
 - usar desenho com blocos.
 
-# 8. Variáveis, Fatores, Tratamentos e Objetos de Estudo
+# 8. Planejamento Experimental
 
-## 8.1 Objetos de Estudo
-- Pull Requests simulados com defeitos injetados
-- Trechos de código de ~100–150 linhas
-- Defeitos distribuídos entre lógica, estilo, documentação, segurança e performance
+## 8.1 Unidade Experimental
+A unidade experimental neste estudo é **cada revisor individual**, responsável por avaliar um pull request (PR) seguindo um dos tratamentos definidos (com checklist ou sem checklist).  
+Cada participante executará revisões **individualmente**, permitindo comparar o desempenho entre diferentes níveis de experiência e diferentes tratamentos.
 
-## 8.2 Sujeitos / Participantes
-Participantes:
-- Estudantes de Engenharia de Software / Ciência da Computação  
-ou  
-- Desenvolvedores juniores
+---
 
-Perfil esperado:
-- Conhecimento intermediário de programação
-- Pouca experiência com code review formal
+## 8.2 Objeto
+O objeto do experimento é o **processo de revisão de código** realizado sobre um pull request em um repositório simulado contendo **defeitos previamente inseridos** de forma controlada.
 
-## 8.3 Variáveis Independentes (Fatores)
-| Fator | Níveis | Tipo |
-|------|--------|------|
-| Uso de checklist | Sem checklist / Com checklist | Categórico |
-| Experiência | Alta / Baixa | Categórico |
-| Tipo de PR | T1 / T2 | Contínuo ou categórico |
+Os PRs utilizados terão **complexidade e tamanho semelhantes**, variando apenas nos defeitos introduzidos, garantindo comparabilidade entre os tratamentos.
+
+---
+
+## 8.3 Fatores
+Os fatores definidos para o estudo são:
+
+| **Fator**              | **Tipo**    | **Níveis / Tratamentos**                |
+|------------------------|-------------|------------------------------------------|
+| Uso de Checklist       | Principal   | Com checklist / Sem checklist            |
+| Experiência do Revisor | Bloqueio    | Júnior / Pleno / Sênior                  |
+
+O fator principal é **uso de checklist**, cujo impacto deseja-se observar sobre tempo e detecção de defeitos.
+
+---
 
 ## 8.4 Tratamentos
-### Tratamento 1 — Sem Checklist
-Revisão livre, sem apoio estruturado.
 
-### Tratamento 2 — Com Checklist
-Checklist inclui:
-- nomes consistentes  
+### **Tratamento 1 — Sem Checklist**
+Revisão realizada de forma livre, sem estruturação ou apoio.
+
+### **Tratamento 2 — Com Checklist**
+Revisor utiliza um checklist estruturado com itens como:
+- consistência de nomes  
 - tratamento de erros  
-- aderência ao estilo  
-- funções longas  
-- testes cobrindo novos comportamentos  
-- comentários desnecessários/ausentes  
+- aderência a padrões de estilo  
+- funções muito longas  
+- cobertura de testes  
+- comentários desnecessários ou ausentes  
+
+### **Tabela de Fatores, Tratamentos e Combinações**
+
+| **Fator**              | **Níveis / Tratamentos** | **Descrição**                                   | **Combinações**            |
+|------------------------|---------------------------|--------------------------------------------------|-----------------------------|
+| Uso do Checklist       | Com checklist             | Uso de checklist estruturado                    | Com checklist               |
+|                        | Sem checklist             | Revisão livre                                    | Sem checklist               |
+| Experiência do Revisor | Júnior                    | < 2 anos de experiência                           |                             |
+|                        | Pleno                     | 2–5 anos                                          | **2 × 3 = 6 combinações**  |
+|                        | Sênior                    | > 5 anos                                          |                             |
+
+### **Combinações resultantes**
+- Com checklist + Júnior  
+- Com checklist + Pleno  
+- Com checklist + Sênior  
+- Sem checklist + Júnior  
+- Sem checklist + Pleno  
+- Sem checklist + Sênior  
+
+**Total: 6 combinações experimentais.**
+
+---
 
 ## 8.5 Variáveis Dependentes
-| Variável | Definição | Unidade |
-|----------|-----------|---------|
-| Defeitos corretamente detectados | número real encontrado | contagem |
-| Tempo total | tempo gasto | minutos |
-| Precisão | defeitos corretos / total relatado | proporção |
-| Consistência | desvio-padrão entre participantes | estatístico |
 
-## 8.6 Variáveis de Controle
-- Experiência  
-- Complexidade do PR  
-- Ambiente  
-- Tempo limite  
-- Linguagem do código  
+| **Variável**                    | **Definição**                             | **Unidade**      |
+|---------------------------------|---------------------------------------------|------------------|
+| Defeitos corretamente detectados | Número de defeitos reais encontrados       | Contagem         |
+| Tempo total de revisão           | Tempo gasto na revisão                     | Minutos          |
+| Precisão                         | Defeitos corretos / defeitos relatados     | Proporção        |
+| Consistência                     | Variação entre participantes               | Desvio-padrão    |
+
+---
+
+## 8.6 Variáveis do Experimento (Todas)
+
+| **Variável**               | **Tipo**                        | **Descrição**                                              | **Unidade / Medição**              |
+|----------------------------|----------------------------------|-------------------------------------------------------------|-------------------------------------|
+| Uso do Checklist           | Independente (Fator)             | Indica se o revisor usa checklist estruturado              | Com / sem checklist                 |
+| Tempo de Revisão           | Dependente                       | Tempo gasto no PR                                           | Minutos                             |
+| Defeitos Detectados        | Dependente                       | Número de defeitos identificados                            | Contagem                            |
+| Severidade dos Defeitos    | Dependente (opcional)            | Classificação dos defeitos                                  | Baixo / Médio / Alto                |
+| Tamanho do PR              | Controle                         | Linhas de código alteradas                                 | LOC                                 |
+| Complexidade do Código     | Controle                         | Complexidade ciclomática                                    | Índice                              |
+| Experiência do Revisor     | Bloqueio / Controle              | Júnior, Pleno, Sênior                                       | Categoria                           |
+| Tipo de Mudança            | Controle                         | Tipo da alteração (bugfix, refatoração, feature)           | Categoria                           |
+| Familiaridade com o código | Confusão possível                | Grau de conhecimento do módulo alterado                    | Baixa / Média / Alta                |
+| Pressão de Tempo           | Confusão possível                | Percepção de urgência da tarefa                             | Baixa / Média / Alta                |
+
 
 ## 8.7 Variáveis de Confusão
 - Motivação/fadiga  
