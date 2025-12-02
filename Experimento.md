@@ -1,4 +1,4 @@
-# Plano de Experimento — Seções 1 a 9
+# Plano de Experimento — Seções 1 a 12
 
 ## 1. Identificação básica
 
