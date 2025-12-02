@@ -423,5 +423,239 @@ Revisor utiliza um checklist estruturado com itens como:
 - **Sessões:** 2 por participante  
 - **Duração:** 20–25 min cada
 
+# 10. População, Sujeitos e Amostragem
+
+## 10.1 População-alvo
+A população-alvo deste experimento consiste em **desenvolvedores de software envolvidos em revisões de código (pull requests)** em contextos reais de desenvolvimento. Mais especificamente:
+
+- Desenvolvedores que utilizam **GitHub/GitLab/Bitbucket** em seu fluxo de trabalho.
+- Profissionais que atuam em **times ágeis ou squads de produto**.
+- Linguagens-alvo do estudo: **JavaScript/TypeScript, Java ou Python**.
+
+O experimento busca representar profissionais que executam revisões com alguma regularidade, mas com variação natural de experiência (júnior, pleno e sênior).
+
+---
+
+## 10.2 Critérios de Inclusão
+Um participante será elegível se atender aos seguintes critérios mínimos:
+
+- Ter realizado **pelo menos 5 revisões de código** nos últimos 6 meses.
+- Ter familiaridade com ferramentas de versionamento Git.
+- Ter experiência com leitura e compreensão de código.
+- Estar disponível para realizar a atividade em sessão única de 30–45 min.
+- Concordar com o termo de participação (quando aplicável — ambiente acadêmico ou corporativo).
+
+---
+
+## 10.3 Critérios de Exclusão
+São excluídos participantes que:
+
+- Nunca realizaram revisão de código na prática.
+- Não possuem tempo disponível para completar todas as etapas da sessão.
+- Participaram do **piloto** (evitar contaminação por prévia exposição aos materiais).
+- Possuem conflito direto com o experimento (por exemplo, ajudaram a criar os PRs usados no estudo).
+
+---
+
+## 10.4 Tamanho da Amostra Planejado
+O experimento prevê:
+
+- **30 participantes no total**, distribuídos de forma balanceada:  
+  - 15 no grupo *Com Checklist*  
+  - 15 no grupo *Sem Checklist*
+
+Dentro de cada grupo, pretende-se manter diversidade de níveis de experiência:
+
+- 5 júnior  
+- 5 pleno  
+- 5 sênior  
+
+Este tamanho foi definido considerando:
+
+- Recursos disponíveis (tempo e logística).
+- Possibilidade de conduzir ANOVA com poder estatístico mínimo.
+- Estudos semelhantes na literatura com amostras de 24–32 participantes.
+
+---
+
+## 10.5 Método de Seleção / Recrutamento
+O recrutamento será feito por **amostragem por conveniência**, utilizando:
+
+- Convite enviado a desenvolvedores de empresas parceiras.
+- Divulgação entre ex-alunos de Engenharia de Software.
+- Voluntários de comunidades online de Git e revisão de código.
+
+A seleção respeitará **ordem de resposta**, garantindo distribuição equilibrada de experiência.
+
+---
+
+## 10.6 Treinamento e Preparação dos Sujeitos
+Antes da execução, todos os participantes receberão:
+
+- **Guia de instruções** sobre o objetivo geral da tarefa (sem revelar hipóteses).
+- **Mini-tutorial do ambiente de revisão**.
+- **Exemplo de PR** simples para familiarização com a interface.
+
+Participantes do grupo *Com Checklist* receberão:
+
+- Explicação breve sobre uso do checklist.
+
+Participantes do grupo *Sem Checklist* receberão:
+
+- Apenas instruções-padrão da tarefa.
+
+---
+
+# 11. Instrumentação e Protocolo Operacional
+
+## 11.1 Instrumentos de Coleta
+| Instrumento           | Tipo              | Função                                              |
+| --------------------- | ----------------- | --------------------------------------------------- |
+| PRs simulados         | Arquivos/Repo Git | Contêm defeitos controlados para revisão.           |
+| Checklist estruturado | PDF/Markdown      | Orienta revisores do grupo experimental.            |
+| Formulário pós-tarefa | Google Forms      | Coleta opinião, percepção e dificuldades.           |
+| Planilha de Log       | Automático        | Registra tempo total gasto (início/fim).            |
+| Script de validação   | Python            | Compara defeitos relatados com defeitos existentes. |
+
+---
+
+## 11.2 Materiais de Suporte
+- Documento de **instruções gerais**.
+- Guia rápido do ambiente GitHub.
+- Passo a passo para envio da revisão.
+- Para administradores: checklist de operação da sessão.
+
+---
+
+## 11.3 Procedimento Experimental — Passo a Passo (Protocolo)
+1. **Convite e agendamento** dos participantes.  
+2. **Recebimento das instruções gerais** por e-mail.  
+3. **Chegada à sessão** e confirmação do grupo (Checklist / Sem Checklist).  
+4. **Treinamento inicial** (5 min):  
+   - uso do ambiente,  
+   - materiais permitidos.  
+5. **Início da tarefa**:  
+   - participante recebe o link do PR correspondente.  
+   - participante inicia o timer automático.  
+6. **Execução da revisão**:  
+   - Grupo A: revisão livre.  
+   - Grupo B: revisão com checklist.  
+7. **Envio da revisão**.  
+8. **Registro automático do tempo**.  
+9. **Preenchimento do formulário pós-tarefa**.  
+10. **Encerramento e agradecimento**.  
+11. **Armazenamento dos dados** para análise.
+
+---
+
+## 11.4 Plano de Piloto
+O piloto será realizado com **4 participantes** (2 com checklist, 2 sem). Objetivos:
+
+- Identificar problemas de usabilidade no ambiente.
+- Verificar clareza das instruções.
+- Verificar se o tempo estimado é realista.
+- Avaliar se os PRs possuem dificuldade equivalente.
+
+Ajustes possíveis:
+
+- Reformulação de instruções.
+- Ajuste da complexidade dos PRs.
+- Revisão do checklist.
+- Correção de falhas no script de coleta.
+
+---
+
+## Fluxograma do Experimento (Operacional)
+
+Início
+↓
+Recrutamento dos participantes
+↓
+Classificação dos níveis de experiência
+↓
+Randomização (Checklist / Sem Checklist)
+↓
+Envio das instruções prévias
+↓
+Sessão experimental inicia
+↓
+Treinamento rápido (5 min)
+↓
+Distribuição do PR e dos materiais (checklist se aplicável)
+↓
+Participante inicia timer e começa a revisão
+↓
+Registro automático do tempo
+↓
+Participante envia revisão final
+↓
+Participante preenche formulário pós-tarefa
+↓
+Coleta dos arquivos, defeitos e logs
+↓
+Validação automática dos defeitos detectados
+↓
+Armazenamento dos dados para análise
+↓
+Encerramento
+
+
+---
+
+# 12. Plano de Análise de Dados (Pré-execução)
+
+## 12.1 Estratégia Geral de Análise
+Os dados serão utilizados para responder às questões principais:
+
+1. **O uso de checklist aumenta a detecção de defeitos?**  
+   - Comparação entre grupos.
+2. **O checklist altera o tempo de revisão?**  
+   - Análise de médias e variâncias.
+3. **A experiência do revisor influencia os efeitos do checklist?**  
+   - Interações fatoriais.
+
+A análise seguirá estas etapas:
+
+- limpeza dos dados;
+- consolidação em planilha única;
+- análise exploratória (gráficos, boxplots);
+- aplicação de testes estatísticos;
+- interpretação dos resultados.
+
+---
+
+## 12.2 Métodos Estatísticos Planejados
+- **ANOVA bifatorial** (Checklist × Experiência) para:  
+  - tempo de revisão,  
+  - defeitos detectados.
+- **Testes t** (pós-hoc) quando necessário.
+- **Correção de múltiplas comparações** (Tukey HSD).
+- **Análise de normalidade** (Shapiro-Wilk).
+- Se os dados não forem normais:  
+  - **Mann-Whitney** (2 grupos),  
+  - **Kruskal-Wallis** (3 níveis de experiência).
+
+---
+
+## 12.3 Tratamento de Dados Faltantes e Outliers
+Regras pré-definidas:
+
+- Dados faltantes em variáveis essenciais → remover participante.
+- Outliers serão detectados por:  
+  - **IQR (1.5×)**,  
+  - inspeção visual.
+- Outliers serão mantidos se representarem comportamento legítimo.
+
+---
+
+## 12.4 Plano de Análise para Dados Qualitativos
+Para comentários qualitativos:
+
+- Codificação aberta das respostas.
+- Agrupamento por temas (ex.: dificuldade, clareza, carga cognitiva).
+- Análise de frequência das categorias.
+- Comparação entre grupos quando fizer sentido.
+
+
 
 ```md
