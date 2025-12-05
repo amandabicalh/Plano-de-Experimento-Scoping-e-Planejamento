@@ -568,7 +568,7 @@ Ajustes possíveis:
 ## Fluxograma do Experimento (Operacional)
 
 
-![Fluxograma](./imgs/fluxograma.png)
+![Fluxograma](./imgs/fluxo.png)
 
 ---
 
