@@ -14,7 +14,7 @@
 
 ### 1.3 Versão do documento e histórico de revisão
 
-- **Versão:** v1.0  
+- **Versão:** v5.0  
 - **Histórico de revisão:**  
   - v1.0 (2025-11-21) — Criação inicial do plano com Seções 1 e 2 concluídas.
   - v2.0 (2025-11-25) - Seções 3 a 6 adicionadas.
