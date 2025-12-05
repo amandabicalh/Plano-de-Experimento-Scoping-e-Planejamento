@@ -571,34 +571,7 @@ Início
 ↓
 Recrutamento dos participantes
 ↓
-Classificação dos níveis de experiência
-↓
-Randomização (Checklist / Sem Checklist)
-↓
-Envio das instruções prévias
-↓
-Sessão experimental inicia
-↓
-Treinamento rápido (5 min)
-↓
-Distribuição do PR e dos materiais (checklist se aplicável)
-↓
-Participante inicia timer e começa a revisão
-↓
-Registro automático do tempo
-↓
-Participante envia revisão final
-↓
-Participante preenche formulário pós-tarefa
-↓
-Coleta dos arquivos, defeitos e logs
-↓
-Validação automática dos defeitos detectados
-↓
-Armazenamento dos dados para análise
-↓
-Encerramento
-
+![Fluxograma](./imgs/fluxograma.png)
 
 ---
 
