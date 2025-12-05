@@ -17,11 +17,15 @@
 - **Versão:** v1.0  
 - **Histórico de revisão:**  
   - v1.0 (2025-11-21) — Criação inicial do plano com Seções 1 e 2 concluídas.
+  - v2.0 (2025-11-25) - Seções 3 a 6 adicionadas.
+  - v3.0 (2025-11-28) - Seções 7 a 9 e tabelas adicionadas.
+  - v4.0 (2025-12-02) - Seções 10 a 12 adicionadas.
+  - v5.0 (2025-12-5) - Seções 13 e 14 até 20 adicionadas, mudança no fluxograma e vídeo
 
 ### 1.4 Datas (criação, última atualização)
 
 - **Data de criação:** 21 de novembro de 2025  
-- **Data da última atualização:** 21 de novembro de 2025
+- **Data da última atualização:** 5 de dezembro de 2025
 
 ### 1.5 Autores (nome, área, contato)
 
