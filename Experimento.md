@@ -752,7 +752,171 @@ A validade externa avalia a capacidade de generalizar os resultados para outros 
 
 ---
 
-Se quiser, posso integrar essa seção ao documento maior, gerar versão unificada, deixar mais formal, ou criar uma versão em PDF ou DOCX.
+# 14. Ética, Privacidade e Conformidade
+
+## 14.1 Questões Éticas
+
+* Garantir participação voluntária, sem coerção ou pressão.
+* Evitar que estudantes sintam obrigação de participar para obter nota.
+* Prevenir riscos de exposição de informações sensíveis dos participantes.
+* Definir políticas claras para incentivos (se existirem), evitando influência indevida.
+* Garantir que a participação não gere riscos materiais, emocionais ou profissionais aos sujeitos.
+
+## 14.2 Consentimento Informado
+
+* Apresentar documento com objetivos, procedimentos, riscos e benefícios.
+* Explicar que a participação é voluntária e que o participante pode desistir a qualquer momento.
+* Indicar como os dados serão usados, armazenados, protegidos e posteriormente descartados.
+* Obter registro formal do consentimento (assinatura física ou digital).
+
+## 14.3 Privacidade e Proteção de Dados
+
+* Coletar somente dados estritamente necessários.
+* Aplicar anonimização ou pseudoanonimização de identificadores pessoais.
+* Armazenar dados em repositórios privados com acesso controlado.
+* Estabelecer tempo de retenção limitado e seguro.
+* Garantir conformidade com LGPD.
+
+## 14.4 Aprovações Necessárias
+
+* Comitê de Ética ou CEP institucional (se aplicável).
+* Jurídico ou Compliance da organização.
+* Data Protection Officer (DPO).
+* Gestores responsáveis pelo ambiente experimental.
+
+# 15. Recursos, Infraestrutura e Orçamento
+
+## 15.1 Recursos Humanos e Papéis
+
+* **Pesquisador Principal:** coordenação geral, decisões e supervisão.
+* **Coletor de Dados:** administração do experimento e registro de métricas.
+* **Analista de Dados:** tratamento estatístico e interpretação.
+* **Avaliador Técnico:** suporte para configuração de ambientes.
+
+## 15.2 Infraestrutura Técnica Necessária
+
+* Repositório Git (GitHub/GitLab).
+* Ferramentas de coleta de logs.
+* Plataforma de questionários.
+* Ambientes de desenvolvimento padronizados.
+* Servidor/VM para armazenamento dos dados coletados.
+
+## 15.3 Materiais e Insumos
+
+* Computadores com acesso ao repositório.
+* Licenças de software (se necessário).
+* Formulários digitais.
+* Documentos de instrução e checklist.
+
+## 15.4 Orçamento e Custos Estimados
+
+* Custos com pessoal (horas dedicadas).
+* Licenças ou serviços de nuvem.
+* Materiais de apoio.
+* Reserva orçamentária institucional.
+
+# 16. Cronograma, Marcos e Riscos Operacionais
+
+## 16.1 Macrocronograma
+
+* Semana 1: Revisão final do plano.
+* Semana 2: Aprovação ética e jurídica.
+* Semana 3: Treinamento dos participantes.
+* Semana 4: Execução do piloto.
+* Semana 5: Ajustes do protocolo.
+* Semana 6: Início da execução oficial.
+
+## 16.2 Dependências
+
+* Treinamento depende da aprovação ética.
+* Execução depende do piloto.
+* Análise depende da coleta de dados concluída.
+
+## 16.3 Riscos Operacionais e Contingência
+
+* **Baixa adesão:** recrutar participantes adicionais.
+* **Problemas técnicos:** equipe de TI de prontidão.
+* **Atrasos no cronograma:** replanejamento com margens de segurança.
+
+# 17. Governança do Experimento
+
+## 17.1 Papéis e Responsabilidades
+
+* **Decisores:** pesquisador principal e supervisor.
+* **Executores:** facilitadores e coletores de dados.
+* **Revisores:** equipe técnica e metodológica.
+* **Informados:** participantes, coordenação, TI.
+
+## 17.2 Ritos de Acompanhamento
+
+* Reuniões semanais de alinhamento.
+* Checkpoints a cada marco do cronograma.
+* Revisões metodológicas antes de ajustes.
+
+## 17.3 Controle de Mudanças
+
+* Propostas registradas em documento formal.
+* Avaliação técnica e ética antes de aprovação.
+* Registro histórico das alterações.
+
+# 18. Plano de Documentação e Reprodutibilidade
+
+## 18.1 Repositórios e Nomeação
+
+* Repositório privado com convenções padronizadas.
+* Diretórios: `/plano/`, `/instrumentos/`, `/scripts/`, `/dados/`.
+
+## 18.2 Templates e Artefatos
+
+* Modelos de questionários.
+* Guias operacionais.
+* Checklists estruturados.
+* Scripts de coleta e análise.
+
+## 18.3 Empacotamento para Replicação
+
+* Documentação completa do protocolo.
+* Scripts automatizados.
+* Instruções de instalação.
+* Guia para replicação futura.
+
+# 19. Plano de Comunicação
+
+## 19.1 Públicos e Mensagens
+
+* Participantes: objetivos, expectativas e datas.
+* Gestores: escopo, riscos e resultados esperados.
+* TI: infraestrutura e suporte necessário.
+
+## 19.2 Canais e Frequência
+
+* E-mail semanal.
+* Reuniões quinzenais.
+* Canal dedicado no Teams/Slack.
+
+## 19.3 Pontos Obrigatórios
+
+* Aprovação do plano.
+* Mudanças estruturais.
+* Início e encerramento da execução.
+
+# 20. Critérios de Prontidão (Definition of Ready)
+
+## 20.1 Checklist de Prontidão
+
+* Aprovação ética.
+* Instrumentos finalizados.
+* Participantes recrutados.
+* Infraestrutura configurada.
+* Comunicação inicial enviada.
+
+## 20.2 Aprovações Finais
+
+* Pesquisador responsável.
+* Comitê de Ética.
+* Gestor do projeto.
+* Registro formal via documento assinado ou sistema institucional.
+
 
 
 
