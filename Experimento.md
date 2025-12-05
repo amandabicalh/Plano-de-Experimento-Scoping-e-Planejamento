@@ -567,10 +567,7 @@ Ajustes possíveis:
 
 ## Fluxograma do Experimento (Operacional)
 
-Início
-↓
-Recrutamento dos participantes
-↓
+
 ![Fluxograma](./imgs/fluxograma.png)
 
 ---
