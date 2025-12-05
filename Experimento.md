@@ -656,6 +656,104 @@ Para comentários qualitativos:
 - Análise de frequência das categorias.
 - Comparação entre grupos quando fizer sentido.
 
+# 13. Avaliação de Validade (Ameaças e Mitigação)
+
+## 13.1 Validade de Conclusão
+
+A validade de conclusão se refere à robustez das inferências estatísticas — isto é, se as conclusões sobre relacionamentos, diferenças ou efeitos são confiáveis. As principais ameaças e respectivas estratégias de mitigação são:
+
+### **Ameaças**
+
+* **Baixo poder estatístico** devido a tamanho de amostra insuficiente.
+* **Violação de suposições estatísticas** (normalidade, homogeneidade) que podem invalidar testes paramétricos.
+* **Erros de medida** nas métricas coletadas (tempo de revisão, defeitos detectados) por inconsistência nos instrumentos.
+* **Variabilidade excessiva entre participantes**, principalmente por diferenças de experiência.
+
+### **Mitigação**
+
+* Definição prévia de tamanho mínimo de amostra considerando poder desejado (≥ 0,8).
+* Uso de **testes não paramétricos** quando suposições forem violadas (ex.: Mann-Whitney, Kruskal-Wallis).
+* Instrumentação padronizada: logs automáticos, formulários alinhados, validação prévia dos dados.
+* Uso de **blocos por experiência** e análise estratificada.
+
+---
+
+## 13.2 Validade Interna
+
+A validade interna avalia se a relação observada entre tratamento e resposta realmente reflete causalidade, e não causas alternativas.
+
+### **Ameaças**
+
+* **History:** fatores externos que afetam participantes durante o experimento.
+* **Maturation:** cansaço, melhora natural ou aprendizado durante o experimento.
+* **Selection bias:** grupos desbalanceados em experiência ou familiaridade.
+* **Instrumentation:** diferenças entre versões de formulários ou instruções.
+* **Testing effect:** familiarização com tarefas após primeira exposição.
+
+### **Mitigação**
+
+* Execução do experimento em sessão controlada e com duração limitada para reduzir fatores externos.
+* Aplicação de **contrabalanço** (ordem aleatória de tarefas quando houver mais de um PR).
+* Randomização completa na alocação ao grupo “Com checklist” e “Sem checklist”.
+* Uso de um **protocolo padronizado** para todos os participantes.
+* Treinamento inicial equivalente antes da execução das tarefas.
+
+---
+
+## 13.3 Validade de Constructo
+
+A validade de constructo trata de verificar se os instrumentos e métricas realmente medem os conceitos que afirmam medir.
+
+### **Ameaças**
+
+* Métricas de defeitos podem não refletir corretamente “qualidade da revisão”.
+* Tempo total pode não representar “esforço cognitivo”.
+* Checklist pode ser interpretado de formas diferentes pelos participantes.
+* Conceitos de “experiência júnior/pleno/sênior” podem conter ambiguidades.
+
+### **Mitigação**
+
+* Definição operacional explícita de cada métrica e variável.
+* Checklist padronizado e validado previamente em piloto.
+* Uso de instruções detalhadas para evitar interpretações múltiplas.
+* Registro automático de tempo para evitar subjetividade.
+* Classificação de experiência baseada em critérios objetivos (anos + tipos de projetos).
+
+---
+
+## 13.4 Validade Externa
+
+A validade externa avalia a capacidade de generalizar os resultados para outros contextos organizacionais, tecnológicos ou humanos.
+
+### **Ameaças**
+
+* Amostra restrita (ex.: estudantes ou somente um time/empresa).
+* Tipo de PR utilizado pode não representar PRs reais do mercado.
+* Checklist pode não se adequar a todas as linguagens ou estilos.
+* Ambiente de experimento pode não reproduzir pressões reais de tempo.
+
+### **Mitigação**
+
+* Selecionar PRs representativos de cenários reais em empresas.
+* Descrever claramente o contexto para permitir replicação.
+* Usar participantes com diferentes níveis de experiência.
+* Replicar o experimento em diferentes times/organizações (futuro).
+
+---
+
+## 13.5 Resumo das Principais Ameaças e Estratégias de Mitigação
+
+| Tipo de Validade | Ameaças Principais                                             | Estratégias de Mitigação                                                         |
+| ---------------- | -------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| **Conclusão**    | Baixo poder, violações de suposições, erro de medida           | Tamanho de amostra adequado, testes não paramétricos, instrumentação padronizada |
+| **Interna**      | Causas externas, seleção desigual, learning effect             | Randomização, contrabalanço, protocolo padronizado, treinamento                  |
+| **Constructo**   | Métricas pouco representativas, interpretações ambíguas        | Definições operacionais claras, checklist validado, instruções detalhadas        |
+| **Externa**      | Amostra pouco representativa, PR artificial, contexto limitado | Seleção de PRs reais, detalhamento de contexto, diversidade de participantes     |
+
+---
+
+Se quiser, posso integrar essa seção ao documento maior, gerar versão unificada, deixar mais formal, ou criar uma versão em PDF ou DOCX.
+
 
 
 ```md
