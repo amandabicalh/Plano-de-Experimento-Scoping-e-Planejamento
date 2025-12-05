@@ -569,6 +569,8 @@ Ajustes possíveis:
 
 
 ![Fluxograma](./imgs/fluxo1.png)
+
+
 ![Fluxograma](./imgs/fluxo2.png)
 
 
