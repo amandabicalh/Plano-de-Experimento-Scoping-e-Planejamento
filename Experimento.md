@@ -728,6 +728,7 @@ A validade externa avalia a capacidade de generalizar os resultados para outros 
 | **Constructo**   | Métricas pouco representativas, interpretações ambíguas        | Definições operacionais claras, checklist validado, instruções detalhadas        |
 | **Externa**      | Amostra pouco representativa, PR artificial, contexto limitado | Seleção de PRs reais, detalhamento de contexto, diversidade de participantes     |
 
+Link vídeo: https://drive.google.com/file/d/1IQ274ucM6QHPHj368Fmkb0efEOItuwps/view?usp=sharing
 ---
 
 # 14. Ética, Privacidade e Conformidade
